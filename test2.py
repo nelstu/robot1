@@ -65,7 +65,7 @@ boton_ingresar.click()
 
 
 
-time.sleep(2)
+time.sleep(5)
 # Hacer clic en el botón "Consultar" (usando XPath con texto)
 boton_consultar = driver.find_element(By.XPATH, "//button[contains(text(), 'Consultar')]")
 boton_consultar.click()
@@ -79,7 +79,7 @@ elemento_venta = WebDriverWait(driver, 10).until(
 elemento_venta.click()
 
 
-time.sleep(2)
+time.sleep(5)
 
 # Esperar y hacer clic en el botón "Descargar Detalles"
 boton_descargar = WebDriverWait(driver, 15).until(
@@ -151,7 +151,7 @@ if archivo:
     ws.auto_filter.ref = ws.dimensions  # Aplica el filtro a toda la tabla
     wb.save(archivo_excel)
 
-    time.sleep(4)
+    time.sleep(5)
     enviar_archivo_por_email("nstuardo@gmail.com", archivo_excel)
 else:
     print("No se encontró ningún archivo para enviar.")
